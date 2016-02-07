@@ -81,12 +81,14 @@ weaverii_get_sidebar_left('single');
 		}
 	?>
 
-		
 
-
-	<?php
-	$speaker_email_address = types_render_field('wpcf-email', array("output"=>"html"));
-	echo($speaker_email_address);
+	<?php 
+	// Queries if the speaker has an email address.
+		$speakerEmail = get_post_meta($post->ID, 'wpcf-email', true); 
+	// If a email exists, displays it as a bullet point.
+		if ($speakerEmail) {
+		echo "<li><strong>Email: </strong><a title='$speakerEmail' href='mailto:$speakerEmail'>$speakerEmail</a></li>";
+		}
 	?>
 
 
