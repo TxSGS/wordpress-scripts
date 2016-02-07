@@ -123,24 +123,14 @@ weaverii_get_sidebar_left('single');
 	</li>
 </ul>
 
+<!—Displays the last date modified, more useful here than date created.—>
+<p>Last modified: <?php the_modified_date(); ?></p>
+
 </div>
 <!— *** End Speaker Profile Template *** —>
 
 
-				<nav id="nav-below" class="navigation">
-				<h3 class="assistive-text"><?php echo __( 'Post navigation','weaver-ii'); ?></h3>
-<?php			    if (weaverii_getopt('wii_single_nav_style')=='prev_next') {
-?>
-					<div class="nav-previous"><?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> Previous','weaver-ii'), $cats ); ?></div>
-				<div class="nav-next"><?php next_post_link( '%link', __( 'Next <span class="meta-nav">&rarr;</span>','weaver-ii'), $cats ); ?></div>
-<?php			    } else {
-?>
-					<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link','weaver-ii') . '</span> %title', weaverii_getopt_checked('wii_single_nav_link_cats') ); ?></div>
-				<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link','weaver-ii') . '</span>', $cats ); ?></div>
-<?php			    }
-?>
-				</nav><!-- #nav-above -->
-
+				
 
 <?php
                 comments_template( '', true ); ?>
