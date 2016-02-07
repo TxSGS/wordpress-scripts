@@ -68,10 +68,6 @@ weaverii_get_sidebar_left('single');
 		}
 	?>
 
-
-
-
-
 	<?php 
 	// Queries the speaker's phone number.
 		$speakerPhone = get_post_meta($post->ID, 'wpcf-phone-number', true); 
@@ -81,7 +77,6 @@ weaverii_get_sidebar_left('single');
 		}
 	?>
 
-
 	<?php 
 	// Queries if the speaker has an email address.
 		$speakerEmail = get_post_meta($post->ID, 'wpcf-email', true); 
@@ -90,7 +85,6 @@ weaverii_get_sidebar_left('single');
 		echo "<li><strong>Email: </strong><a title='$speakerEmail' href='mailto:$speakerEmail'>$speakerEmail</a></li>";
 		}
 	?>
-
 
 	<?php 
 	// Queries if the speaker has a website.
@@ -102,8 +96,6 @@ weaverii_get_sidebar_left('single');
 	?>
 
 	</ul>
-
-
 
 <h3>Speaking Details</h3>
 
@@ -130,7 +122,6 @@ weaverii_get_sidebar_left('single');
 
 </div>
 <!— *** End Speaker Profile Template *** —>
-
 
 				
 
