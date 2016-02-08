@@ -36,7 +36,9 @@ function hide_shipping_when_free_is_available( $rates, $package ) {
 }
 
 
+// Begin custom functions by Colleen.
 
+// Combines individual custom meta fields for Speakers into a single concatenated full address variable for Speaker CPT.
 add_filter('save_post', 'combine_my_fields');
 function combine_my_fields($post_id, $post) {
 $fullAddress = get_post_meta($post_id, 'wpcf-street', true) . ', ';
@@ -45,7 +47,6 @@ $fullAddress .= get_post_meta($post_id, 'wpcf-state', true) . ' ';
 $fullAddress .= get_post_meta($post_id, 'wpcf-zip-code', true);
 update_post_meta($post_id, 'full-address', $fullAddress);
 }
-
 
  
 ?>
