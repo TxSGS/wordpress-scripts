@@ -115,6 +115,19 @@ weaverii_get_sidebar_left('single');
 	the_terms( $post->ID, 'speaking-topic', '<strong>Speaking Topics:</strong> ', ', ' ); 
 	?>
 	</li>
+
+
+
+	<?php 
+	// Queries if there are any Travel Notes.
+		$speakerTravelNotes = get_post_meta($post->ID, 'wpcf-travel', true); 
+	// If travel notes exist, displays it as a bullet point.
+		if ($speakerTravelNotes) {
+	    	echo "<li><strong>Travel Notes: </strong>$speakerTravelNotes</li>";
+		}
+	?>
+
+
 </ul>
 
 <!—Displays the last date modified, more useful here than date created.—>
