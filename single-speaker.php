@@ -131,7 +131,7 @@ weaverii_get_sidebar_left('single');
 </ul>
 
 <!—Displays the last date modified, more useful here than date created.—>
-<p>Last modified: <?php the_modified_date(); ?></p>
+<p>Last Updated: <?php the_modified_date(); ?></p>
 
 </div>
 <!— *** End Speaker Profile Template *** —>
